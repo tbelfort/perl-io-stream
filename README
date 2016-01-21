@@ -1,0 +1,38 @@
+IO-Stream version 1.0.9
+
+Non-blocking event-based low-level I/O is hard to get right. Code usually
+error-prone and complex... and it very similar in all applications. Things
+become much worse when you need to alter I/O stream in some way - use
+proxies, encryption, SSL, etc.
+
+This module designed to give user ability to work with I/O streams on
+higher level, using input/output buffers (just scalars) and high-level
+events like CONNECTED, SENT or EOF. As same time it doesn't hide low-level
+things, and user still able to work on low-level without any limitations.
+
+Architecture of this module make it ease to write plugins, which will alter
+I/O stream in any way - route it through proxies, encrypt, log, etc.
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+
+DEPENDENCIES
+
+EV
+EV::ADNS
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008,2014, Alex Efros
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
