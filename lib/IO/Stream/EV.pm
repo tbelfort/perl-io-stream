@@ -91,7 +91,7 @@ sub resolve {
     else {
         weaken($plugin);
         # WARNING   ADNS has own timeouts, so we don't setup own here.
-        EV::ADNS::submit $host, EV::ADNS::r_addr(), 0, sub {
+        EV::ADNS::submit $host, EV::ADNS::r_a(), 0, sub {
             my ($status, undef, @a) = @_;
             return if !$plugin;
             if ($status == EV::ADNS::s_ok()) {
